@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Cuestionario CEE</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="introduccion-cuestionario">
+    <div class="encabezado-intro">
+      <img src="logo.png" alt="Logo Corporación" class="logo-intro" />
+      <h1 class="titulo-cuestionario">Diagnóstico estilos de enseñanza</h1>
+    </div>
+    <p>
+      Este cuestionario tiene como propósito identificar los estilos predominantes de enseñanza entre los docentes que acompañarán el programa <strong>Semestre Cero</strong>, liderado por la <strong>Corporación Gilberto Echeverri Mejía</strong> y la <strong>Secretaría de Educación de Antioquia</strong>. La información recopilada permitirá adaptar las estrategias pedagógicas al perfil de los formadores, fortaleciendo así la calidad del acompañamiento a los estudiantes en su transición hacia la educación superior.
+    </p>
+    <p>
+      Las respuestas son confidenciales y no tienen implicaciones evaluativas. El cuestionario consta de una serie de afirmaciones a las que debe responder “Sí” o “No” según sus prácticas académicas y de enseñanza en el aula.
+    </p>
+  </div>
+
+  <div class="tabla-container">
+
+    <!-- Información personal -->
+<div class="formulario-identificacion">
+  <h2 class="formulario-titulo">Información personal</h2>
+  <div class="campos-container">
+    <input type="text" placeholder="Nombre" name="nombre" id="username" class="campo-input" />
+    <input type="number" placeholder="Documento" name="documento" id="userid" class="campo-input" />
+    <select name="modulo" id="modulo" class="campo-input">
+    <option value="" disabled selected>Seleccione un módulo</option>
+    <option value="Matemáticas y Razonamiento Lógico">Matemáticas y Razonamiento Lógico</option>
+    <option value="Lectura Crítica y Competencias Ciudadanas">Lectura Crítica y Competencias Ciudadanas</option>
+    <option value="Inglés como Lengua Extranjera">Inglés como Lengua Extranjera</option>
+    <option value="Biología">Biología</option>
+    <option value="Física">Física</option>
+    <option value="Inteligencia Artificial">Inteligencia Artificial</option>
+    <option value="Orientación Socio Ocupacional">Orientación Socio Ocupacional</option>
+    </select>
+  </div>
+</div>
+
+    <!-- División -->
+    <hr class="division-seccion" />
+    <h2 class="formulario-titulo">Cuestionario</h2>
+
+    <!-- Tabla de preguntas -->
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 50px;"></th>
+          <th>Afirmación</th>
+          <th class="center">Sí</th>
+          <th class="center">No</th>
+        </tr>
+      </thead>
+      <tbody id="preguntas-body">
+        <!-- Las preguntas se insertarán aquí dinámicamente -->
+      </tbody>
+    </table>
+
+    <!-- Botón de envío -->
+    <div class="boton-container">
+      <button onclick="enviarFormulario()">Enviar</button>
+    </div>
+
+    <!-- Resultados -->
+    <div id="resultado" class="resultado-container"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
